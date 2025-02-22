@@ -1,5 +1,4 @@
 import React from 'react'
-import Partner from './Partner'
 const Companies = () => {
   return (
     <div className='px-10 py-10 text-center mt-20'>

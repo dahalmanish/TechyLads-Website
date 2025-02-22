@@ -1,17 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import About from './pages/About.jsx';
-import Services from './pages/Services.jsx';
-import Careers from './pages/Careers.jsx';
-import Contact from './pages/Contact.jsx';
+import Carrierad from './admin/carrierad.jsx';
 import Dashboard from './admin/Dashboard.jsx';
-import PublicLayout from './publiclayout.jsx';
-import ProtectedLayout from './protectedlayout.jsx';
 import Productad from './admin/productad.jsx';
 import Servicead from './admin/servicead.jsx';
+import About from './pages/About.jsx';
+import Careers from './pages/Careers.jsx';
+import Contact from './pages/Contact.jsx';
+import Home from './pages/Home.jsx';
 import Product from './pages/Product.jsx';
-import Carrierad from './admin/carrierad.jsx';
-import { SignIn, SignUp,} from "@clerk/clerk-react";
+import Services from './pages/Services.jsx';
+import ProtectedLayout from './protectedlayout.jsx';
+import PublicLayout from './publiclayout.jsx';
 function App() {
    
   return (

@@ -1,5 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
+import React from "react";
 
 const Card = ({ title, description, image }) => {
   return (

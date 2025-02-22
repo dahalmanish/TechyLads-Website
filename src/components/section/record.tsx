@@ -1,5 +1,5 @@
+import { Bug, Coffee, Ghost, Hand, Moon } from "lucide-react";
 import React from "react";
-import { Moon, Hand, Bug, Ghost, Coffee } from "lucide-react";
 
 const records = [
   { icon: <Moon size={40} />, title: "Late Night Spent Coding", count: "1,000+" },

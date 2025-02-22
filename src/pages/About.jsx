@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion'; // Import motion
+import React from 'react';
 import History from '../components/section/history';
 import Question from '../components/section/Question';
 

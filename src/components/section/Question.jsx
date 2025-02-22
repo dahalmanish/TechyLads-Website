@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 
 const Question = () => {
   const [activeQuestion, setActiveQuestion] = useState(null);

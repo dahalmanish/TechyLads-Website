@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 import { FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (

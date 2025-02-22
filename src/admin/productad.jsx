@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import { supabase } from "../service/supabase";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar"; // Import Sidebar
+import { supabase } from "../service/supabase";
 
 export default function Productad() {
   const [newCard, setNewCard] = useState({

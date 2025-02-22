@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { BarChart, Activity, Users, ShoppingCart, MessageSquare, Bell, Search, Menu, Settings, ChevronDown, ChevronUp } from 'lucide-react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 
 const Dashboard = () => {

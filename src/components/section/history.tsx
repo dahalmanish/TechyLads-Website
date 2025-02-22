@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion'; // Import motion
+import React from 'react';
 import Button from '../Button';
 
 const History = () => {
