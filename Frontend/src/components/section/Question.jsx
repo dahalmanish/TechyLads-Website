@@ -11,7 +11,7 @@ const Question = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/ans");
+        const response = await axios.get("https://techy-lads-website.vercel.app/api/ans");
         setQuestions(response.data);
       } catch (error) {
         console.error("Error fetching FAQs:", error);
