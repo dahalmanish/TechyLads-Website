@@ -18,7 +18,7 @@ export default function Productad() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/pds");
+        const response = await axios.get("https://techy-lads-website-42ca.vercel.app/api/pds");
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -80,13 +80,13 @@ export default function Productad() {
       const cardData = { ...newCard, image_url: imageUrl };
       if (selectedProduct) {
         // If there's a selected product, update it
-        const response = await axios.put(`http://localhost:8000/api/products/${selectedProduct._id}`, cardData);
+        const response = await axios.put(`https://techy-lads-website-42ca.vercel.app/api/products/${selectedProduct._id}`, cardData);
         if (response.status === 200) {
           alert("Product updated successfully!");
         }
       } else {
         // If no product is selected, create a new one
-        const response = await axios.post("http://localhost:8000/api/products", cardData);
+        const response = await axios.post("https://techy-lads-website-42ca.vercel.app/api/products", cardData);
         if (response.status === 201) {
           alert("Product added successfully!");
         }
@@ -101,7 +101,7 @@ export default function Productad() {
   // Handle delete product
   const handleDelete = async (productId) => {
     try {
-      const response = await axios.delete(`http://localhost:8000/api/products/${productId}`);
+      const response = await axios.delete(`https://techy-lads-website-42ca.vercel.app/api/products/${productId}`);
       if (response.status === 200) {
         alert("Product deleted successfully!");
         setProducts((prevProducts) => prevProducts.filter((product) => product._id !== productId));

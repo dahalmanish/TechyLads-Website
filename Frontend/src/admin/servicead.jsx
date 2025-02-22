@@ -18,7 +18,7 @@ export default function Servicead() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/svs");
+        const response = await axios.get("https://techy-lads-website-42ca.vercel.app/api/svs");
         setServices(response.data);
       } catch (error) {
         console.error("Error fetching services:", error);
@@ -80,13 +80,13 @@ export default function Servicead() {
       const serviceData = { ...newService, image_url: imageUrl };
       if (selectedService) {
         // If there's a selected service, update it
-        const response = await axios.put(`http://localhost:8000/api/services/${selectedService._id}`, serviceData);
+        const response = await axios.put(`https://techy-lads-website-42ca.vercel.app/api/services/${selectedService._id}`, serviceData);
         if (response.status === 200) {
           alert("Service updated successfully!");
         }
       } else {
         // If no service is selected, create a new one
-        const response = await axios.post("http://localhost:8000/api/services", serviceData);
+        const response = await axios.post("https://techy-lads-website-42ca.vercel.app/api/services", serviceData);
         if (response.status === 201) {
           alert("Service added successfully!");
         }
@@ -102,7 +102,7 @@ export default function Servicead() {
   const handleDelete = async (serviceId) => {
     console.log("Deleting service with ID:", serviceId);  // Add this line for debugging
     try {
-      const response = await axios.delete(`http://localhost:8000/api/services/${serviceId}`);
+      const response = await axios.delete(`https://techy-lads-website-42ca.vercel.app/api/services/${serviceId}`);
       if (response.status === 200) {
         alert("Service deleted successfully!");
         setServices((prevServices) => prevServices.filter((service) => service._id !== serviceId));

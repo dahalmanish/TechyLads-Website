@@ -10,7 +10,7 @@ const Position = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/jobs");
+        const response = await axios.get("https://techy-lads-website-42ca.vercel.app/api/jobs");
         setJobList(response.data); 
       } catch (err) {
         setError("Failed to fetch job listings");

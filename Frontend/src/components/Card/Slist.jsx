@@ -8,7 +8,7 @@ const Slist = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/svs"); // Update with your API URL
+        const response = await axios.get("https://techy-lads-website-42ca.vercel.app/api/svs"); // Update with your API URL
         setCards(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

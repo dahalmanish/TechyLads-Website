@@ -14,7 +14,7 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    const response = await axios.post("http://localhost:8000/api/faqs", formData);
+    const response = await axios.post("https://techy-lads-website-42ca.vercel.app/api/faqs", formData);
       alert("Data submitted successfully!");
       setFormData({ question: "", answer: ""}); // Reset form
    console.log("response",response)
