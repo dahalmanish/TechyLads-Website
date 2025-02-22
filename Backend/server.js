@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173", 
+  origin: ["http://localhost:5173","https://techy-lads-website-42ca.vercel.app"], 
   credentials: true,
 }));
 
