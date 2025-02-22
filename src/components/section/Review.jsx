@@ -6,12 +6,12 @@ const Testimonials = () => {
         image: "review1.jpg",
       },
       {
-        name: "Manish Dahal",
+        name: "Bhim Bahadur Bonjan",
         review: "Better Facilty and Good Working Environment",
         image: "Review2.jpg",
       },
       {
-        name: "Roshan Lamsal",
+        name: "Amit Khadka",
         review: "Highly recommended for IT Services",
         image: "Review3.jpg",
       },

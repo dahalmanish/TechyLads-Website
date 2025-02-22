@@ -7,6 +7,7 @@ import img6 from '../../assets/image6.png';
 import img10 from '../../assets/image10.png';
 import img9 from '../../assets/image9.png';
 import img8 from '../../assets/image8.png';
+import img4 from '../../assets/image4.png';
 
 const images = [img1, img2, img5, img6, img10, img9, img8,img4];
 

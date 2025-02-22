@@ -12,6 +12,7 @@ app.use(cors({
 const FAQ = require("./models/question"); // Ensure this model exists
 const Product = require('./models/product');
 const Service = require('./models/service');
+const Job = require('./models/Job');
 
 app.use(express.json());
 
@@ -166,6 +167,59 @@ app.delete('/api/services/:id', async (req, res) => {
   } catch (error) {
     console.error('Error deleting service:', error);
     res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+app.get("/api/jobs", async (req, res) => {
+  try {
+    const jobs = await Job.find();
+    res.json(jobs);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Get a single job by ID
+app.get("/api/jobs/:id", async (req, res) => {
+  try {
+    const job = await Job.findById(req.params.id);
+    if (!job) return res.status(404).json({ message: "Job not found" });
+    res.json(job);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Create a new job
+app.post("/api/carry", async (req, res) => {
+  console.log(req.body);
+  const { title, description, tags } = req.body;
+  const newJob = new Job({ title, description, tags });
+  try {
+    const savedJob = await newJob.save();
+    res.status(201).json(savedJob);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Update a job
+app.put("/api/jobs/:id", async (req, res) => {
+  try {
+    const updatedJob = await Job.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(updatedJob);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Delete a job
+app.delete("/api/jobs/:id", async (req, res) => {
+  try {
+    await Job.findByIdAndDelete(req.params.id);
+    res.json({ message: "Job deleted" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
 });
 const PORT = process.env.PORT || 5000;

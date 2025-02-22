@@ -11,6 +11,7 @@ import Productad from './admin/productad.jsx';
 import Servicead from './admin/servicead.jsx';
 import Product from './pages/Product.jsx';
 import Carrierad from './admin/carrierad.jsx';
+import { SignIn, SignUp,} from "@clerk/clerk-react";
 function App() {
    
   return (
@@ -32,7 +33,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/product" element={<Productad />} />
           <Route path="/service" element={<Servicead/>}/>
-          <Route path="/carrier" element={<Carrierad/>} />
+          <Route path="/carry" element={<Carrierad/>} />
         </Route>
     </Routes>
     </>
