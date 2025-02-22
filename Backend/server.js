@@ -1,6 +1,10 @@
 const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
+const FAQ = require("./models/question"); // Ensure this model exists
+const Product = require('./models/product');
+const Service = require('./models/service');
+const Job = require('./models/Job');
 require("dotenv").config();
 
 const app = express();
@@ -9,10 +13,6 @@ app.use(cors({
   origin: "http://localhost:5173", 
   credentials: true,
 }));
-const FAQ = require("./models/question"); // Ensure this model exists
-const Product = require('./models/product');
-const Service = require('./models/service');
-const Job = require('./models/Job');
 
 app.use(express.json());
 
