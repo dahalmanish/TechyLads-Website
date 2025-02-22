@@ -23,7 +23,7 @@ const Carrierad = () => {
       };
       console.log(jobData);
 
-      const response = await axios.post("https://techy-lads-website-42ca.vercel.app/api/carry", jobData);
+      const response = await axios.post("https://techy-lads-website.vercel.app/api/carry", jobData);
       alert("Job posted successfully!");
       setFormData({ title: "", description: "", tags: "" }); // Reset form
       console.log("Response:", response.data);
