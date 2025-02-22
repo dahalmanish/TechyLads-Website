@@ -1,12 +1,12 @@
 import React from 'react';
-import img1 from '../../assets/image1.png';
-import img10 from '../../assets/image10.png';
-import img2 from '../../assets/image2.png';
-import img4 from '../../assets/image4.png';
-import img5 from '../../assets/image5.png';
-import img6 from '../../assets/image6.png';
-import img8 from '../../assets/image8.png';
-import img9 from '../../assets/image9.png';
+import img1 from '../../assets/Image1.png';
+import img10 from '../../assets/Image10.png';
+import img2 from '../../assets/Image2.png';
+import img4 from '../../assets/Image4.png';
+import img5 from '../../assets/Image5.png';
+import img6 from '../../assets/Image6.png';
+import img8 from '../../assets/Image8.png';
+import img9 from '../../assets/Image9.png';
 
 const images = [img1, img2, img5, img6, img10, img9, img8,img4];
 
